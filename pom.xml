@@ -31,32 +31,15 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				  <!-- <cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.3.0</muleVersion>
-						<username>pvn1234</username>
-						<password>Praveen#51990</password>
-						<applicationName>country-timezone-service</applicationName>
-						<environment>Sandbox</environment>
-						<workerType>MICRO</workerType>
-						<properties>
-							<key>value</key>
-						</properties>
-					</cloudHubDeployment> -->
-					
-					
-					<cloudHubDeployment>
+				   <cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<username>pvn1234</username>
                         <password>Praveen#51990</password>
-						<!-- <server>my.anypoint.credentials</server> -->
 						<applicationName>country-timezone-service</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
-						<properties>
-							<key>value</key>
-						</properties>
+						
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
