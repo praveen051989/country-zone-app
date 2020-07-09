@@ -48,7 +48,9 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
-						<server>my.anypoint.credentials</server>
+						<username>pvn1234</username>
+                        <password>Praveen#51990</password>
+						<!-- <server>my.anypoint.credentials</server> -->
 						<applicationName>country-timezone-service</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
