@@ -39,7 +39,7 @@
 						<applicationName>country-timezone-service</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
-						
+						<workers>1</workers>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
