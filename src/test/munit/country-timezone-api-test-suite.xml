@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="country-timezone-api-test-suite.xml" />
+	
+	<munit:test name="country-timezone-api-test-suite-world-demo-apiFlowTest" doc:id="dbbb619e-5241-4194-99f1-07e79bc188b9" description="Test">
+		<munit:execution >
+			
+			<munit:set-event doc:name="Set Event" doc:id="ebd6a844-7195-47b3-8632-09a7951332f4" >
+				<munit:attributes value="#[{ uriParams:{region:'Asia',city:'Kolkata'}}]
+" mediaType="application/java" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to world-demo-apiFlow" doc:id="94492e04-4c2f-4ccc-9d7e-e196af75fcbd" name="world-demo-apiFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="f9af4752-4c8f-4320-8ad6-966d64e97602" message="#['payload is empty/null']" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="c9dd9bd4-2b42-4097-8c52-1ef6ee8d03f7" is="#[MunitTools::withMediaType('application/json')]" message="#['Response is not application/json']" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+
+</mule>
