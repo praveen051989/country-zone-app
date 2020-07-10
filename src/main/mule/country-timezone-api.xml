@@ -25,6 +25,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="Listener"
 			doc:id="f4d5ee95-b7c7-4e81-a71d-33de8b440a00"
 			config-ref="HTTP_Listener_config" path="/{region}/{city}" />
+		<logger level="INFO" doc:name="Logger" doc:id="543a6560-b130-4767-93fd-c6a62197eb17" message="#['Request Received' ++ now().hour ++ ':' ++ now().minutes ++ ':' ++ now().seconds]"/>
 		<http:request method="GET" doc:name="Request"
 			doc:id="a1392065-4b49-49b0-9322-f0e67be1cc79"
 			config-ref="HTTP_Request_configuration" path="/{region}/{city}">
