@@ -8,6 +8,13 @@ pipeline
   sh '/Users/akhil/Softwares/maven-3.6.0/bin/mvn clean install'
   }
   }
+  
+  stage('Munit Test for application'){
+  steps{
+  sh '/Users/akhil/Softwares/maven-3.6.0/bin/mvn test'
+  }
+  }
+  
   stage('Deploy application to Mulesoft CloudHub '){
   steps{
   sh '/Users/akhil/Softwares/maven-3.6.0/bin/mvn package deploy -DmuleDeploy'
