@@ -73,9 +73,6 @@
 				doc:name="Assert that" doc:id="b41ba30e-a0cb-4993-94b4-2a3da333cfb2"
 				expression="#[payload.dst]" is="#[MunitTools::equalTo(false)]"
 				message="#['DST value should be false']" />
-				<munit-tools:then-return>
-  <munit-tools:payload value="#[readUrl('classpath://sample_data/mockPost.dwl')]" mediaType="application/json" encoding="UTF-8" />
-</munit-tools:then-return>
 		</munit:validation>
 
 		
